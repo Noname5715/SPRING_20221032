@@ -45,7 +45,6 @@ public class DemoController {
         model.addAttribute("para2", 002);
         return "thymeleaf_test1";
     }
-
     // 기초적
 
 }
