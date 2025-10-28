@@ -19,7 +19,12 @@ public class DemoController {
     @GetMapping("/testdb")
     public String getAllTestDBs(Model model) {
         TestDB test = testService.findByName("홍길동");
+        TestDB test2 = testService.findByName("아저씨");
+        TestDB test3 = testService.findByName("한중현");
         model.addAttribute("data4", test);
+        model.addAttribute("data5", test2);
+        model.addAttribute("data6", test3);
+
         System.out.println("데이터 출력 디버그 : " + test);
         return "testdb";
     }

@@ -1,12 +1,15 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import java.util.List;
@@ -53,6 +56,13 @@ public class BlogController {
     @DeleteMapping("/api/article_delete/{id}")
     public String deleteArticle(@PathVariable Long id) {
         blogService.delete(id);
+        return "redirect:/article_list";
+    }
+
+    @PostMapping("/api/articles") // post 요청
+
+    public String addArticle(@ModelAttribute AddArticleRequest request) { // 아직없음(에러)
+        blogService.save(request); // 게시글저장
         return "redirect:/article_list";
     }
 
