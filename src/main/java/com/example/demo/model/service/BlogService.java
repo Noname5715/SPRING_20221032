@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import com.example.demo.model.domain.Article;
 import com.example.demo.model.domain.Board;
@@ -27,13 +29,26 @@ public class BlogService {
         return boardRepository.findAll();
     }
 
-    public Article save(AddArticleRequest request) {
-        // DTO가없는경우이곳에직접구현가능
-        // public ResponseEntity<Article> addArticle(@RequestParam String title,
-        // @RequestParam String content) {
-        // Article article = Article.builder().title(title).content(content).build();
+    public Page<Board> findAll(Pageable pageable) {
+        return boardRepository.findAll(pageable);
+    }
 
-        return blogRepository.save(request.toEntity());
+    public Page<Board> searchByKeyword(String keyword, Pageable pageable) {
+        return boardRepository.findByTitleContainingIgnoreCase(keyword, pageable);
+    } // LIKE 검색 제공(대소문자 무시)
+
+    // public Article save(AddArticleRequest request) {
+    // // DTO가없는경우이곳에직접구현가능
+    // // public ResponseEntity<Article> addArticle(@RequestParam String title,
+    // // @RequestParam String content) {
+    // // Article article = Article.builder().title(title).content(content).build();
+
+    // return blogRepository.save(request.toEntity());
+    // }
+
+    public Board save(AddArticleRequest request) {
+        // DTO가 없는 경우 이곳에 직접 구현 가능
+        return boardRepository.save(request.toEntity());
     }
 
     // public Optional<Article> findById(Long id) { // 게시판특정글조회
