@@ -20,7 +20,8 @@ public class SecurityConfig { // 스프링에서 보안 관리 클래스
                         .addHeaderWriter((request, response) -> {
                             response.setHeader("X-XSS-Protection", "1; mode=block"); // XSS-Protection 헤더설정
                         }))
-                .csrf(withDefaults()) // 에러시import 추가
+                // .csrf(withDefaults()) // 에러시import 추가
+                .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session
                         .invalidSessionUrl("/session-expired") // 세션만료시이동페이지
                         .maximumSessions(1) // 사용자별세션최대수
