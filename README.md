@@ -1,3 +1,4 @@
+
 <h2>3주차: 부트스트랩 기반으로 한 디자인을 개인 포트폴리오로 제작하기.</h2>
 <br>
 <h3>내용</h3>
@@ -9,7 +10,6 @@
 <br>
 3주차 연습문제: 포트폴리오 뒤로가기 추가 완료
 <br><br><br>
-
 
 <h2>4주차: 데이터베이스 연동 및 테스트.</h2>
 <br>
@@ -77,11 +77,32 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 <br>
 <img width="902" height="402" alt="image" src="https://github.com/user-attachments/assets/fc6ac6a1-a8dc-402a-894f-b7a0139c6971" />
 <br>
-6주차 에러페이지 예외처리 완료.
+6주차 연습문제: 에러페이지 예외처리 완료.
 <br><br><br>
 
+<h2>7주차: 블로그 게시판 수정!</h2>
+<br>
+<h3>내용</h3>
 
+프로필 수정하기<br>
+-나의 프로젝트 소스코드 확인 및 수정<br>
+-포트폴리오 컨테이너 하위 체크 및 이미지 변경<br>
+
+게시판 수정하기<br>
+-article을 활용한 board 게시판 제작 시작.<br>
+-프론트 디자인 수정<br>
+-기존의 Article DB대신 Board DB를 만들어낸다.(id, 제목, 내용, 이름, 시간, 조회수, 좋아요)<br>
+-artice_list를 대체한 board_list에는 id, 제목, 이름, 시간 ,조회수, 좋아요가 들어갈 파라미터를 설정.<br>
+-BoardRepository를 만들어서 Board를 지포지토리에 연동시킨다.<br>
+-기존의 서비스 안에 든 findall과 findbyid 메소드는 주석 처리 혹은, Board에 맞게 변경.<br> 
+-제목을 클릭하면 글의 내용을 볼, board_view.html 생성.<br>
+-html에 수정, 삭제버튼 추가 및 기능 구현<br>
+<br>
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/547ab242-f4b8-4c17-83d8-481a1c56cdc3" />
 <br>
-7주차 게시판 페이지 글 수정 추가 완료.
+7주차 연습문제: 게시판 페이지 글 수정 추가 완료.
 <br><br><br>
+
+
+-게시판 페이지 분리
+-백엔드 기능
