@@ -1,21 +1,19 @@
 <h2>3주차: 부트스트랩 기반으로 한 디자인을 개인 포트폴리오로 제작하기.</h2>
-<br><br>
-<h3>내용</h3>
 <br>
+<h3>내용</h3>
 상단의 네비바를 수정하여 게시판으로 가는 곳로 디자인. <br>
 자신과 관련된 이미지, 전공, 분야 등등으로 프로필 채워놓기. <br>
 하이퍼링크를 통한 맵핑구현 스크립트.<br>
 <br>
 <img width="1226" height="553" alt="image" src="https://github.com/user-attachments/assets/9393c29a-2552-4f1b-9b02-9349e2dbadd1" />
 <br>
-3주차 포트폴리오 작성하기 완료
+3주차 연습문제: 포트폴리오 뒤로가기 추가 완료
 <br><br><br>
 
 
-<h2>4주차: 포트폴리오 작성하기.</h2>
-<br><br>
-<h3>내용</h3>
+<h2>4주차: 데이터베이스 연동 및 테스트.</h2>
 <br>
+<h3>내용</h3>
 프로필 추가 수정하기.<br>
 -기술 경험의 주요 내용을 한글로 바꾸고, 자신과 관련된 내용으로 바꾼다.<br>
 <br>
@@ -27,32 +25,54 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 <br>
 <img width="736" height="437" alt="image" src="https://github.com/user-attachments/assets/7dfdde6f-7532-4f71-a8f0-2ecbcf559fb1" />
 <br>
-4주차 사용자 추가 및 출력하기 완료
+4주차 연습문제: 사용자 추가 및 출력하기 완료
 <br><br><br>
 
 
-<h2>5주차: 포트폴리오 작성하기.</h2>
-<br><br>
-<h3>내용</h3>
+<h2>5주차: 블로그 게시판 제작 1.</h2>
 <br>
+<h3>내용</h3>
 프로필 추가 수정하기.<br>
 -포트폴리오 네비바, 게시판 페이지로 맵핑.<br>
 -게시판 페이지 생성<br>
-<br><br>
+<br>
 블로그 게시판(조회)<br>
--controller, service, repossitory로 폴더 세분화.
--데이터 테이블 생성
+-게시판 페이지 생성<br>
+-controller, service, repossitory로 폴더 세분화.<br>
+-엔티티 클래스 추가 –Entity: 데이터베이스 구조(테이블) 작성<br>
+-리포지토리 클래스 추가 –Repository: 데이터베이스 제어기능 작성<br>
+-서비스 클래스 추가 –Service: 게시판 주요기능(로직) 작성<br>
+-컨트롤러 클래스 추가 –Controller: 게시판 요청/응답 기능 작성<br>
+<br>
 블로그 게시판(글쓰기)<br>
-
-
+-게시판 글쓰기 페이지 생성<br>
+-게시글을 저장하는 매핑 추가<br>
+-service를 통한 DTO추가.<br>
+<br>
 
 <img width="901" height="493" alt="image" src="https://github.com/user-attachments/assets/8628f0ed-62e3-4c90-a665-cf92b6c13e42" />
 <br>
 <img width="927" height="466" alt="image" src="https://github.com/user-attachments/assets/7a0325a5-904f-46cf-a9a7-6b25b6cb6cbf" />
 <br>
-5주차 페이지 리다이렉트 완료
+5주차 연습문제: 페이지 리다이렉트 완료
 <br><br><br>
 
+<h2>6주차: 블로그 게시판 제작 2.</h2>
+<br>
+<h3>내용</h3>
+블로그 게시판(수정)<br>
+-게시글 목록 아래 수정, 삭제버튼 추가.<br>
+-수정 페이지 추가(article_edit.html)<br>
+-컨트롤러 클래스 추가+ 매핑<br>
+-서비스 클래스(BlogService.java) 수정, 수정기능(로직) 작성, Optional(널 리턴 방지)<br>
+-html과 컨트롤러에 수정 버튼 put매핑 등록, update 호출.<br>
+-테이블인 파일(Article.java) 객체(테이블)를 수정하는 update 메소드 추가<br>
+-application.properties 설정 변경 spring.mvc.hiddenmethod.filter.enabled=true<br>
+<br>
+블로그 게시판(삭제)<br>
+-컨트롤러 클래스 수정(DELETE 매핑+ html 약간 수정)<br>
+-서비스 클래스에 삭제기능 추가<br>
+<br>
 <img width="1903" height="632" alt="image" src="https://github.com/user-attachments/assets/61180eeb-a3a9-4b23-8eaf-e8dc90d71f52" />
 <br>
 <img width="902" height="402" alt="image" src="https://github.com/user-attachments/assets/fc6ac6a1-a8dc-402a-894f-b7a0139c6971" />
