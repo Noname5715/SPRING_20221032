@@ -132,8 +132,11 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 <br>
 <img width="985" height="330" alt="image" src="https://github.com/user-attachments/assets/ec033bd5-8d76-4230-945b-9fe4ff387c2e" />
 <br>
-9주차 연습문제: 게시판 페이지 글 수정 추가 완료.
+9주차 연습문제: 게시판 페이지 글 수정 및 삭제기능 추가 완료.
 <br><br><br>
 
+<h2>10주차: 로그인과 로그아웃</h2>
+<br>
+<h3>내용</h3>
 
 
