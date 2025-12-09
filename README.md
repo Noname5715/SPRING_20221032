@@ -103,6 +103,37 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 7주차 연습문제: 게시판 페이지 글 수정 추가 완료.
 <br><br><br>
 
+<h2>8주차: 없음</h2>
+<br>
 
--게시판 페이지 분리
--백엔드 기능
+<h2>9주차: 검색과 페이징</h2>
+<br>
+<h3>내용</h3>
+
+게시판 수정하기- 글쓰기<br>
+-index.html에 게시판 네비바, article_list에서 board_list.html로 링크 변경.<br>
+-board_list 글쓰기 버튼 삽입<br>
+-board_write.html생성 및 컨트롤러에 매핑<br>
+-board_write.html 히든 설정 세팅<br>
+-컨트롤러에 /board_write 등록<br>
+-저장기능 기존의 save 메소드 약간 수정<br>
+<br>
+게시판 수정하기-검색창과 페이지<br>
+-html에 검색창 추가.<br>
+-컨트롤러 수정 /board_list 매핑을 추가 수정, 한 페이지의 게시글 수 제한과 키워드 검색에 대한 글 표시.<br>
+-서비스 수정: Board의 findall과 searchByKeyword 기능구현(검색기능)<br>
+-html의 하단에 페이징 기능 구현<br>
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eea14821-824b-4908-8a43-4d3f16fc9ede" />
+<br>
+<img width="940" height="337" alt="image" src="https://github.com/user-attachments/assets/73e51371-0cb8-44f7-9579-bd0df53574b8" />
+<br>
+<img width="1915" height="1077" alt="image" src="https://github.com/user-attachments/assets/fe325398-1da7-436d-a94a-a309369a7ce3" />
+<br>
+<img width="985" height="330" alt="image" src="https://github.com/user-attachments/assets/ec033bd5-8d76-4230-945b-9fe4ff387c2e" />
+<br>
+9주차 연습문제: 게시판 페이지 글 수정 추가 완료.
+<br><br><br>
+
+
+
