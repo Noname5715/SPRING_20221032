@@ -2,9 +2,10 @@
 <h2>3주차: 부트스트랩 기반으로 한 디자인을 개인 포트폴리오로 제작하기.</h2>
 <br>
 <h3>내용</h3>
-상단의 네비바를 수정하여 게시판으로 가는 곳로 디자인. <br>
-자신과 관련된 이미지, 전공, 분야 등등으로 프로필 채워놓기. <br>
-하이퍼링크를 통한 맵핑구현 스크립트.<br>
+프로필 구현<br>
+-상단의 네비바를 수정하여 게시판으로 가는 곳로 디자인. <br>
+-자신과 관련된 이미지, 전공, 분야 등등으로 프로필 수정. <br>
+-하이퍼링크를 통한 맵핑구현 스크립트 구현.<br>
 <br>
 <img width="1226" height="553" alt="image" src="https://github.com/user-attachments/assets/9393c29a-2552-4f1b-9b02-9349e2dbadd1" />
 <br>
@@ -164,6 +165,7 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 <br>오류값(나이, 패스워드) 기입시<br>
 <img width="1920" height="1016" alt="image" src="https://github.com/user-attachments/assets/440dc0a8-60e6-4125-9467-6e1ce183432c" />
 <br>에러 페이지로 이동<br>
+<br>
 10주차 연습문제: 입력값 필터링 추가 완료.
 <br><br><br> 
 
@@ -177,7 +179,7 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 -그림 및 설명을 한글로 수정. (추천인/전문가 후기로 변경)<br>
 <br>
 로그인<br>
--로그인 체크 기능(게시판 접근)을 추가, Controller의 BlogController.java를 수정, 기존 게시판 맵핑(board_list)을 확인.<br>
+-로그인 체크 기능을 추가, Controller의 BlogController.java를 수정, 기존 게시판 맵핑(board_list)을 확인.<br>
 -로그인 과정에 세션을 생성, Controller 폴더에 MemberController.java를 수정, 기존 로그인 검증 맵핑(api/login_check)을 확인<br>
 -로그인 후, "게시판에 사용자 환영합니다." 출력, Controller 폴더에 MemberController.java를 수정, 세션 아이디 아래 email을 세션으로 추가 설정<br>
 -게시판에 사용자 이메일 출력, 로그 아웃 버튼도 추가<br>
@@ -187,7 +189,7 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 -세션에 관련된 보안 기능을 추가: Config 폴더에 SecurityConfig.java를 수정.<br>
 -세션에 관련된 보안 기능을 추가. 최상위 폴더에 application.properties를 수정.(로딩 시점과 우선 순위 확인)<br>
 -300초 = 5분, 쿠키 https 전송 활성화<br>
-
+<br>
 
 <img width="1426" height="472" alt="image" src="https://github.com/user-attachments/assets/a5a8f0dd-3b7e-4dab-bd7e-746df0ab480c" /><br>
 글쓰기 완료시, 유저 이름으로 표시하기 완료.<br>
@@ -195,13 +197,23 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 타인의 게시글 수정, 삭제 불가능한 화면<br>
 <img width="1450" height="590" alt="image" src="https://github.com/user-attachments/assets/d1a1082f-9d01-452d-b35c-e292b2dc60a5" /><br>
 자신의 게시글 수정, 삭제 화면 가능 화면<br>
-
-
-
-
+<br>
 11주차 연습문제: 게시판 수정하기 완료.
+<br><br><br> 
+
+<h2>12주차: 로그인과 로그아웃</h2>
+<br>
+<h3>내용</h3>
+
+프로필 수정하기(개인 최종)<br>
+-프로필 최하단 소스코드 확인: Templates의 index.html을 수정, 주소및 연락처 등 한글로 수정.<br>
+-메일 업로드 기능으로 수정: Templates의 index.html을 수정, 기존 최하단 연락하기 소스를 확인.<br>
+-메일 업로드를 위한 컨트롤러를 추가: Controller 폴더에 FileController.java를 추가, 파일 업로드를 위한 post 매핑을 구현<br>
+-파일업로드 완료 화면을 작성: Templates 폴더에 upload_end.html을 생성<br>
+<br>
+
+12주차 연습문제: 세션 처리, 파일 업로드 완료.
 
 
-세션 유지/검사<br>
-로그아웃<br>
+
 
