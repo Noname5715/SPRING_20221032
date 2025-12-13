@@ -139,4 +139,32 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 <br>
 <h3>내용</h3>
 
+회원 가입하기<br>
+-스프링 시큐리티(의존성 추가), pom.xml 수정<br>
+-config 폴더 생성, 안에 보안 설정(필터 체인, 암호화 설정 등)을 처리하기 위한 SecurityConfig.java 생성<br>
+-도메인 Member.java(id, 이름, 이메일, 패스워드, 나이, 전화번호, 주소) 생성<br>
+-회원 가입을 위한,  MemberController.java을 생성하고 매핑 등록.<br>
+-회원 가입 화면 페이지를 작성: Templates 폴더에 join_new.html을 생성.(기본 구조는 board_list.html을 재활용)<br>
+-레포지토리에 Member_Repository.java를 생성<br>
+-회원 가입 등 서비스 기능을 작성: service 폴더에 Member_Service.java를 생성(기본 구조는 BlogService.java을 재활용과 기본 구조는 이전의 글쓰기 기능과 동일)<br>
+-회원 가입 등에필요한 DTO를 작성: Service에 AddMemberRequest.java를 작성. (참고 : 기본 구조는 기존 DTO와 동일)<br>
+-회원가입하기 –완료 화면: Templates 폴더에 join_end.html을 생성<br>
+<br>
+로그인<br>
+-Templates 폴더에 login.html을 생성(기본 구조는 board_list.html을 재활용)<br>
+-회원 로그인을 위한 맵핑을 등록 : Controller의 MemberContoroller.java를 수정.(로그인페이지와 로그인 체크 2가지 맵핑 추가)<br>
+-회원 로그인을 서비스를 등록: Service의 MemberService.java를 수정. (이메일과 패스워드 일치 확인)<br>
+<br>
+
+<img width="912" height="570" alt="image" src="https://github.com/user-attachments/assets/eeacf50d-a5c5-45b5-bb14-7664a6be5738" />
+<br>
+입력값 제한
+<br>
+<img width="1381" height="812" alt="image" src="https://github.com/user-attachments/assets/dddeea2b-745c-4725-bea8-418bcb86154c" />
+<br>오류값(나이, 패스워드) 기입시<br>
+<img width="1920" height="1016" alt="image" src="https://github.com/user-attachments/assets/440dc0a8-60e6-4125-9467-6e1ce183432c" />
+<br>에러 페이지로 이동<br>
+10주차 연습문제: 입력값 필터링 추가 완료.
+<br><br><br> 
+
 
