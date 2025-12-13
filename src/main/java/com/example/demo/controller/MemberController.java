@@ -16,6 +16,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 
 import org.springframework.ui.Model;
 
@@ -30,7 +31,7 @@ public class MemberController {
     }
 
     @PostMapping("/api/members") // 회원 가입 저장
-    public String addmembers(@ModelAttribute AddMemberRequest request) {
+    public String addmembers(@Valid @ModelAttribute AddMemberRequest request) {
         memberService.saveMember(request);
         return "join_end"; // .HTML 연결
     }
@@ -54,17 +55,46 @@ public class MemberController {
                 response.addCookie(cookie); // 응답으로 쿠키 전달
             }
 
-            session = request2.getSession(true); // 새로운 세션 생
+            session = request2.getSession(true); // 새로운 세션 생성
             Member member = memberService.loginCheck(request.getEmail(), request.getPassword()); // 패스워드 반환
             String sessionId = UUID.randomUUID().toString(); // 임의의 고유 ID로 세션 생성
             String email = request.getEmail(); // 이메일 얻기
+            String name = member.getName();// 이름 얻기.
+
             session.setAttribute("userId", sessionId); // 아이디 이름 설정
             session.setAttribute("email", email); // 이메일 설정
+            session.setAttribute("name", name);// 이름 설정
             model.addAttribute("member", member); // 로그인 성공 시 회원 정보 전달
             return "redirect:/board_list"; // 로그인 성공 후 이동할 페이지
+
         } catch (IllegalArgumentException e) {
             model.addAttribute("error", e.getMessage()); // 에러 메시지 전달
             return "login"; // 로그인 실패 시 로그인 페이지로 리다이렉트
+        }
+    }
+
+    @PostMapping("/api/login_check")
+    public String checkMembers(@ModelAttribute AddMemberRequest request,
+            Model model,
+            HttpServletRequest request2) {
+
+        try {
+            // 사용자별로 새로운 세션 생성 (컨테이너가 자동 분리)
+            HttpSession session = request2.getSession(true);
+
+            Member member = memberService.loginCheck(
+                    request.getEmail(),
+                    request.getPassword());
+
+            // 로그인한 사용자 정보만 세션에 저장
+            session.setAttribute("email", member.getEmail());
+            session.setAttribute("name", member.getName());
+
+            return "redirect:/board_list";
+
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("error", e.getMessage());
+            return "login";
         }
     }
 
@@ -77,7 +107,7 @@ public class MemberController {
             cookie.setPath("/"); // 쿠키의경로
             cookie.setMaxAge(0); // 쿠키만료0이면삭제
             response.addCookie(cookie); // 응답에쿠키설정
-            session = request2.getSession(true); // 새로운세션생성
+            session = request2.getSession(true); // 새로운세션 생성
             System.out.println("세션userId: " + session.getAttribute("userId")); // 초기화후IDE 터미널에세션값출력
             return "login"; // 로그인페이지로리다이렉트
         } catch (IllegalArgumentException e) {

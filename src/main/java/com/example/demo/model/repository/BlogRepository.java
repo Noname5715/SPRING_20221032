@@ -10,4 +10,6 @@ import com.example.demo.model.domain.Board;
 @Repository // 리포지토리
 public interface BlogRepository extends JpaRepository<Article, Long> {
 
+    Page<Board> findByTitleContainingIgnoreCase(String keyword, Pageable pageable);
+
 }

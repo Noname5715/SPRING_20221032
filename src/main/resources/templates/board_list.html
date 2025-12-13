@@ -41,8 +41,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="board : ${boards}">
-                        <td th:text="${board.id}"></td>
+                    <tr th:each="board,boardStat : ${boards}">
+                        <td th:text="${startNum + boardStat.index}"></td>
                         <td>
                             <a th:href="@{/board_view/{id}(id=${board.id})}">
                                 <span th:text="${board.title}"></span>
@@ -52,6 +52,7 @@
                         <td th:text="${board.newdate}"></td>
                         <td th:text="${board.count}"></td>
                         <td th:text="${board.likec}"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
