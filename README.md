@@ -209,9 +209,13 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 -프로필 최하단 소스코드 확인: Templates의 index.html을 수정, 주소및 연락처 등 한글로 수정.<br>
 -메일 업로드 기능으로 수정: Templates의 index.html을 수정, 기존 최하단 연락하기 소스를 확인.<br>
 -메일 업로드를 위한 컨트롤러를 추가: Controller 폴더에 FileController.java를 추가, 파일 업로드를 위한 post 매핑을 구현<br>
--파일업로드 완료 화면을 작성: Templates 폴더에 upload_end.html을 생성<br>
+-메일 업로드 완료 화면을 작성: Templates 폴더에 upload_end.html을 생성<br>
 <br>
 
+<img width="953" height="492" alt="image" src="https://github.com/user-attachments/assets/45dfa6df-dd90-4beb-b9cd-ce4e9ff05973" /><br>
+<img width="666" height="131" alt="image" src="https://github.com/user-attachments/assets/df1b7adb-8bb3-45a7-85aa-0eb3a2c828bf" /><br>
+파일 업로드 시, 시간에 따라서 다르게 파일명 생성.<br>
+<br>
 12주차 연습문제: 세션 처리, 파일 업로드 완료.
 
 
