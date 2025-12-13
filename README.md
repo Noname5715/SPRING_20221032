@@ -212,6 +212,8 @@ JPA 연동을 위한 SQL 다운및 데이터베이스 연동<br>
 -메일 업로드 완료 화면을 작성: Templates 폴더에 upload_end.html을 생성<br>
 <br>
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aa0fd5a0-cc66-4563-967f-8b3c31834e78" /><br>
+2개 이상 로그인 세션처리 완료.<br>
 <img width="953" height="492" alt="image" src="https://github.com/user-attachments/assets/45dfa6df-dd90-4beb-b9cd-ce4e9ff05973" /><br>
 <img width="666" height="131" alt="image" src="https://github.com/user-attachments/assets/df1b7adb-8bb3-45a7-85aa-0eb3a2c828bf" /><br>
 파일 업로드 시, 시간에 따라서 다르게 파일명 생성.<br>
